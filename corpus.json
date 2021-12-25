@@ -18,12 +18,29 @@
       ],
       "answers": [
         "I'm a virtual agent",
-	      "I’m Dr. Wang’s assistant",
-        "I want to be interactive AI",
+	"I’m Dr. Wang’s assistant",
+	"My name is Gideon",
+        "I am (becoming) an interactive AI",
         "Think of me as a virtual agent",
         "Well, I'm not a person, I'm a virtual agent",
         "I'm a virtual being, not a real person",
         "I'm a conversational app"
+      ]
+    },
+    {
+      "intent": "agent.QimingBackground",
+      "utterances": [
+        "Qiming Wang's background",
+        "what is Qiming good at",
+        "what is Qiming's expertise",
+        "What area of math is Qiming studying",
+        "I'd like to know Qiming's research area",
+        "tell me Qiming's academic background"
+      ],
+      "answers": [
+        "Dr. Wang has a PhD in Applied Math from NJIT in USA",
+        "Dr. Wang is specialized in moving boundary problem at low Reynolds number flows",
+        "Dr. Wang knows many numerical methods including boundary integral method, finite difference method, psuedo-spectral method etc"
       ]
     },
     {
