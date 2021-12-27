@@ -36,12 +36,18 @@
         "what is Qiming's expertise",
         "What area of math is Qiming studying",
         "I'd like to know Qiming's research area",
-        "tell me Qiming's academic background"
+        "tell me Qiming's academic background",
+	"Qiming's research interests"
       ],
       "answers": [
-        "Dr. Wang has a PhD in Applied Math from NJIT in USA",
+        "Dr. Wang has a BS in Math in Nanjing University from China and later a PhD in Applied Math from NJIT in USA",
         "Dr. Wang is specialized in moving boundary problem at low Reynolds number flows",
-        "Dr. Wang knows many numerical methods including boundary integral method, finite difference method, psuedo-spectral method etc"
+        "Dr. Wang knows many numerical methods including boundary integral method, finite difference method, psuedo-spectral method etc",
+	"Dr. Wang studies stability problem in liquid droplet, jet or thread, with possible addition of surfactants or external electric fields",
+	"Dr. Wang's most research interests lie in electrohydrodynamics which is a interfacial-problm-branch popularized by G.I.Taylor in 1960s",
+	"Dr. Wang's most research interests also lie in deriving new equations in lower dimensional space to describe the essential physics in high-dimensional problems",
+	"Dr. Wang stuides capillary instability by doing direct numerical simulations and investigating the possible (discrete or continuous) self-similar solutions",
+	"Dr. Wang also studies neural networks for machine learning but is not an expert really; he knows the basic theory and basic technical details about linear algebra structure of the NN"
       ]
     },
     {
