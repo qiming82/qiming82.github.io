@@ -1,3 +1,7 @@
+// qiming edits
+const MNIST_IMAGES_SPRITE_PATH =
+    'https://storage.googleapis.com/learnjs-data/model-builder/mnist_images.png'
+// qiming edits
 var sample_training_instance = function() {
   // find an unloaded batch
   var bi = Math.floor(Math.random()*loaded_train_batches.length);
@@ -126,20 +130,29 @@ var start_fun = function() {
 
 var load_data_batch = function(batch_num) {
   // Load the dataset with JS in background
+  const chunkSize = 3000;
   data_img_elts[batch_num] = new Image();
   var data_img_elt = data_img_elts[batch_num];
   data_img_elt.onload = function() { 
     var data_canvas = document.createElement('canvas');
     data_canvas.width = data_img_elt.width;
-    data_canvas.height = data_img_elt.height;
+//    data_canvas.height = data_img_elt.height;
+    data_canvas.height = chunkSize;
     var data_ctx = data_canvas.getContext("2d");
-    data_ctx.drawImage(data_img_elt, 0, 0); // copy it over... bit wasteful :(
+
+//    data_ctx.drawImage(data_img_elt, 0, 0); // copy it over... bit wasteful :(
+    data_ctx.drawImage(
+      data_img_elt,0,batch_num*chunkSize,data_img_elt.width,chunkSize,0,0,
+      data_img_elt.width,chunkSize)
+// qiming edits    
     img_data[batch_num] = data_ctx.getImageData(0, 0, data_canvas.width, data_canvas.height);
     loaded[batch_num] = true;
     if(batch_num < test_batch) { loaded_train_batches.push(batch_num); }
     console.log('finished loading data batch ' + batch_num);
   };
-  data_img_elt.src = dataset_name + "/" + dataset_name + "_batch_" + batch_num + ".png";
+  data_img_elt.crossOrigin = 'anonymous';
+  data_img_elt.src = MNIST_IMAGES_SPRITE_PATH;
+//  data_img_elt.src = dataset_name + "/" + dataset_name + "_batch_" + batch_num + ".png";
 }
 
 var maxmin = cnnutil.maxmin;
