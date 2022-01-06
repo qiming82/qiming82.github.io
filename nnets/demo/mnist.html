@@ -60,10 +60,7 @@
   <p>
     This demo trains a Convolutional Neural Network on the <a href="http://yann.lecun.com/exdb/mnist/">MNIST digits dataset</a> in your browser, with nothing but Javascript. The dataset is fairly easy and one should expect to get somewhere around 99% accuracy within few minutes. Karpathy used <a href="mnist_parse.zip">this python script</a> to parse the <a href="http://deeplearning.net/tutorial/gettingstarted.html">original files</a> into batches of images that can be easily loaded into page DOM with img tags. <i>Due to tainted canvas error in JS, I used the image source <a href='https://storage.googleapis.com/learnjs-data/model-builder/mnist_images.png'> here </a> and minimal code edits are done in images-demo.js in loading-image function. </i>
   </p>
-  
-  <p>
-    By default, in this demo we're using Adadelta which is one of per-parameter adaptive step size methods, so we don't have to worry about changing learning rates or momentum over time. However, I still included the text fields for changing these if you'd like to play around with SGD+Momentum trainer.
-  </p>
+ 
   <!--<p>Report questions/bugs/suggestions to <a href="https://twitter.com/karpathy">@karpathy</a>.</p>-->
 
   <h1>Training Stats</h1>
